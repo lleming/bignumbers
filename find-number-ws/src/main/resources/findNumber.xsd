@@ -1,0 +1,31 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+  xmlns:tns="http://myschema.org/bignumbers"
+  targetNamespace="http://myschema.org/bignumbers">
+
+  <xs:element name="number" type="xs:integer"/>
+
+  <xs:element name="Result">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="code" type="tns:codeType"/>
+        <xs:element name="fileNames" nillable="true">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fileName" type="xs:string" minOccurs="0" maxOccurs="20"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="error" type="xs:string" nillable="true"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="codeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="00"/>
+      <xs:enumeration value="01"/>
+      <xs:enumeration value="02"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

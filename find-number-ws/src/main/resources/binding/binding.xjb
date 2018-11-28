@@ -1,0 +1,11 @@
+<jxb:bindings xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://java.sun.com/xml/ns/jaxb https://java.sun.com/xml/ns/jaxb/bindingschema_2_1.xsd"
+  version="2.1">
+
+  <jxb:globalBindings generateElementProperty="false">
+    <jxb:javaType xmlType="xs:integer" name="java.lang.Integer"/>
+  </jxb:globalBindings>
+</jxb:bindings>
+
